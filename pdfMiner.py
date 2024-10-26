@@ -79,5 +79,5 @@ def main():
         print(f"{page}:\n{text}\n")
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

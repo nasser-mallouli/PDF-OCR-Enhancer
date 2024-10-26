@@ -82,5 +82,5 @@ def main():
         print(f"{page_number}:\n{text}\n")
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
