@@ -11,15 +11,15 @@ class EasyOCRPDFExtractor:
     def __init__(self, languages=["en", "de"]):
         self.gpu_info = self._check_gpu_availability()
         try:
-            self.reader = easyocr.Reader(languages, gpu=self.gpu_available)
-            if self.gpu_available:
+            self.reader = easyocr.Reader(languages, gpu=self.gpu_info.get("gpu_available", False))
+            if self.gpu_info.get("gpu_available", False):
                 print("GPU is being used for EasyOCR")
             else:
                 print("CPU is being used for EasyOCR")
         except RuntimeError as e:
             print(f"Error initializing EasyOCR with GPU: {e}")
             print("Falling back to CPU")
-            self.gpu_available = False
+            self.gpu_info["gpu_available"] = False
             self.reader = easyocr.Reader(languages, gpu=False)
 
     def _check_gpu_availability(self):
