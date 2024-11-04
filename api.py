@@ -1,7 +1,7 @@
 import tempfile
 import os
 from baseOCRProcessor import OCRTextCombiner
-from easyOcr import EasyOCRPDFExtractor
+from easyOcrClass import EasyOCRPDFExtractor
 from fastapi import FastAPI, File, UploadFile, Response, status, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse

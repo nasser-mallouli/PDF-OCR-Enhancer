@@ -1,6 +1,6 @@
 import difflib
 
-from easyOcr import EasyOCRPDFExtractor
+from easyOcrClass import EasyOCRPDFExtractor
 from pdfMiner import PDFMinerTextExtractor
 
 
